@@ -20,8 +20,8 @@ function Cart(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {addProduct.length > 0 && addProduct.map(product => <CartItem key={product.id} product={product} />)}
-                        <CartResult />
+                        {addProduct.length > 0 && addProduct.map((product, index) => <CartItem index={index} key={product.id} product={product} />)}
+                        {addProduct.length > 0 && <CartResult />}
                     </tbody>
                 </table>
             </div>
